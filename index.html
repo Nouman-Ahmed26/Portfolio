@@ -926,7 +926,7 @@ body.loading { overflow: hidden; }
       </div>
       <div class="hero-stat-grid" style="margin-top:16px">
         <div class="hero-stat">
-          <div class="stat-num">9</div>
+          <div class="stat-num">10</div>
           <div class="stat-label">Data Projects</div>
         </div>
         <div class="hero-stat">
@@ -1226,6 +1226,21 @@ body.loading { overflow: hidden; }
 <script>
 // ─── DATA ─────────────────────────────────────────────────
 const projects = [
+  {
+    id: "real-estate-segmentation",
+    category: "data",
+    title: "Real Estate Buyer Segmentation",
+    subtitle: "Clustering · Streamlit · Machine Learning",
+    description: "Built an interactive Streamlit dashboard featuring K-Means and Hierarchical Clustering to automatically segment real estate buyers based on demographics and property purchases.",
+    longDescription: "An end-to-end Machine Learning and Business Intelligence project focusing on buyer segmentation in the real estate market. The project segments 2,000 clients and analyses their interaction with 10,000 property listings.\n\nThe pipeline covers data cleaning (imputation of missing values, duplicate removal), categorical encoding, feature scaling, and model training using K-Means and Agglomerative Hierarchical Clustering. The model quality is evaluated via Elbow curves and Silhouette analysis. A comparison showed that Hierarchical Clustering (Ward linkage) significantly outperformed K-Means (Silhouette score: 0.318 vs. -0.023) due to high-dimensional sparse features from country/region columns.\n\nThe final solution features an interactive Streamlit dashboard with dynamic filter chaining, geographic choropleth maps, segment distribution analysis, investor behavior profiling, and a segment deep-dive panel.",
+    tech: ["Python", "Streamlit", "Scikit-learn", "Plotly", "Pandas", "SciPy"],
+    icon: "🏠",
+    color: "#00d4ff",
+    github: "https://github.com/Nouman-Ahmed26/Real-Estate-Buyer-Segmentation",
+    demo: "https://real-estate-buyer-segmentation.streamlit.app/",
+    highlights: ["K-Means & Hierarchical Models", "Streamlit Dashboard", "Geographic Mapping", "Dynamic Filters"],
+    status: "Live",
+  },
   {
     id: "food-recognition-ai",
     category: "ai",
