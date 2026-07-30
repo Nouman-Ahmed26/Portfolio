@@ -1898,8 +1898,7 @@
           <a href="#projects">Projects</a>
           <a href="#certifications">Certifications</a>
           <a href="#contact">Contact</a>
-          <a href="assets/MOHAMMED NOUMAN AHMED.pdf" download="Mohammed_Nouman_Ahmed_CV.pdf" target="_blank" class="nav-cta">Download CV
-            ↓</a>
+          <a href="assets/MOHAMMED NOUMAN AHMED.pdf" onclick="handleCVDownload(event)" class="nav-cta">Download CV ↓</a>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Menu">
           <span></span><span></span><span></span>
@@ -1911,8 +1910,7 @@
       <a href="#projects" onclick="closeMobileNav()">Projects</a>
       <a href="#certifications" onclick="closeMobileNav()">Certifications</a>
       <a href="#contact" onclick="closeMobileNav()">Contact</a>
-      <a href="assets/MOHAMMED NOUMAN AHMED.pdf" download="Mohammed_Nouman_Ahmed_CV.pdf" target="_blank"
-        onclick="closeMobileNav()">Download CV ↓</a>
+      <a href="assets/MOHAMMED NOUMAN AHMED.pdf" onclick="handleCVDownload(event); closeMobileNav();">Download CV ↓</a>
     </div>
 
     <!-- HERO -->
@@ -2617,6 +2615,18 @@
         }, 600);
       }, 1800);
     });
+
+    // ─── DUAL CV DOWNLOAD HANDLER ────────────────────────────
+    function handleCVDownload(e) {
+      if (e) e.preventDefault();
+      window.open('assets/MOHAMMED NOUMAN AHMED.pdf', '_blank');
+      const dlLink = document.createElement('a');
+      dlLink.href = 'assets/MOHAMMED NOUMAN AHMED.pdf';
+      dlLink.download = 'Mohammed_Nouman_Ahmed_CV.pdf';
+      document.body.appendChild(dlLink);
+      dlLink.click();
+      document.body.removeChild(dlLink);
+    }
 
     // ─── INIT ─────────────────────────────────────────────────
     renderProjects('all');
